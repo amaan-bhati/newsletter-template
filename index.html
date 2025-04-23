@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Keploy Community Newsletter - April 2025</title>
     <style>
-
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
             margin: 0;
@@ -24,9 +23,14 @@
         .header {
             padding: 35px 40px;
             text-align: center;
-            background: linear-gradient(135deg, #FF7A00 0%, #FF5400 100%);
-            color: white;
+            background: white;
+            color: linear-gradient(135deg, #FFC180 0%, #FF7A00 100%);
             border-radius: 0 0 12px 12px;
+        }
+        .heading{
+            /* padding: 35px 40px; */
+            color: white;
+            background: linear-gradient(135deg, #FFC180 0%, #FF7A00 100%);
         }
         
         .logo {
@@ -35,9 +39,10 @@
         }
         
         .issue-info {
-            font-size: 14px;
+            font-size: 20px;
             opacity: 0.9;
             margin-top: 10px;
+            font-weight: bold;
         }
         
         /* Content styles */
@@ -54,6 +59,14 @@
         .section:last-child {
             border-bottom: none;
             margin-bottom: 0;
+        }
+
+        .header-h1{
+            font-size: 30px;
+            margin-bottom: -30px;
+            color: white;
+            font-weight: bold;
+            
         }
         
         h1 {
@@ -176,14 +189,21 @@
         }
         
         /* Stats section */
+        .stats-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-bottom: 25px;
+        }
+        
         .stats-box {
             background: #FFF6F0;
             border-radius: 12px;
             padding: 15px;
-            display: inline-block;
-            min-width: 120px;
+            width: calc(50% - 10px);
             text-align: center;
-            margin: 0 10px 10px 0;
+            margin-bottom: 10px;
+            box-sizing: border-box;
         }
         
         .stats-number {
@@ -231,6 +251,29 @@
             margin-right: 5px;
         }
         
+        /* Blogs section */
+        .blog-section {
+            margin-top: 20px;
+        }
+        
+        .blog-post {
+            padding: 15px;
+            border-left: 3px solid #FF7A00;
+            background: #FFF6F0;
+            margin-bottom: 15px;
+            border-radius: 0 6px 6px 0;
+        }
+        
+        .blog-title {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        .blog-date {
+            font-size: 12px;
+            color: #777;
+        }
+        
         /* Responsive adjustments */
         @media screen and (max-width: 600px) {
             .content {
@@ -244,24 +287,32 @@
             .stats-container {
                 flex-direction: column;
             }
+            
+            .stats-box {
+                width: 100%;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
         <!-- Header Section -->
-        <!-- <div class="header">
-            <img src="/api/placeholder/180/60" alt="Keploy Logo" class="logo" />
-            <h1>Keploy Community Newsletter</h1>
-            <div class="issue-info">April 2025 Edition</div>
-        </div> -->
+        <div class="header">
+            <img src="/images/general/keploy-logo.png" alt="Keploy Logo" class="logo" />
+            <div class="heading">
+
+          
+            <h1 class="header-h1">Keploy April Newsletter</h1>
+        </div>
+            <!-- <div class="issue-info">April 2025 Edition</div> -->
+        </div>
         
         <!-- Main Content -->
         <div class="content">
             <!-- Welcome Section -->
             <div class="section">
                 <p>Hey Keploy Community,</p>
-                <p>April has been a month of breakthroughs, milestones, and momentum at Keploy. From launching powerful new features to crossing community milestones - we're beyond thrilled to share everything we've been working on.</p>
+                <p>April has been a month of breakthroughs! From new features to exciting milestones, we're thrilled to share our updates.</p>
                 <p>Let's dive in 👇</p>
             </div>
             
@@ -284,10 +335,10 @@
                         <li>Boosts PR velocity while maintaining code quality</li>
                     </ul>
                     
-                    <p>No more boilerplate. No more last-minute test-writing. The UTG understands your code and delivers only what matters - straight into your GitHub flow.</p>
+                   
                     
                     <p><strong>Getting started is simple:</strong><br>
-                    Install the Keploy GitHub App</p>
+                    <!-- Install the Keploy GitHub App</p> -->
                     
                     <a href="https://github.com/apps/keploy" class="cta-button">Install UTG on GitHub</a>
                 </div>
@@ -296,28 +347,28 @@
             <!-- GitStats Section -->
             <div class="section">
                 <h2>📊 Say Hello to GitStats – Built for Devs, by Devs</h2>
-                <p>As developers, we love building tools for the community. But one challenge we constantly ran into was tracking the number of downloads per release on GitHub.</p>
+                <p>One challenge we constantly ran into was tracking the number of downloads per release on GitHub.</p>
                 
                 <p>While GitHub provides some basic numbers, it lacks a clean and developer-friendly dashboard to help us quickly understand what's going on, especially if you're shipping often.</p>
                 
                 <p>So we thought, why not just build it ourselves?</p>
                 
                 <div class="image-container">
-                    <img src="/api/placeholder/520/260" alt="GitStats Dashboard" />
+                    <img src="/images/general/gitstats.png" alt="GitStats Dashboard" />
                 </div>
                 
                 <p>That's how GitStats was born - a free, open-source tool built using Go, HTML, and CSS that lets you track and visualize your GitHub repository's downloads and release statistics in seconds.</p>
                 
                 <p>It's simple, fast, and made for developers who love shipping fast and staying data-aware.</p>
                 
-                <a href="#" class="cta-button">Explore GitStats Repository</a>
+                <a href="http://gitstats.keploy.io/" class="cta-button">Explore GitStats</a>
             </div>
             
             <!-- Milestones Section -->
             <div class="section">
                 <h2>🏆 Milestones & Achievements</h2>
                 
-                <div style="display: flex; flex-wrap: wrap; justify-content: space-between; margin-bottom: 25px;">
+                <div class="stats-container">
                     <div class="stats-box">
                         <div class="stats-number">8,000+</div>
                         <div class="stats-label">GitHub Stars</div>
@@ -332,25 +383,55 @@
                         <div class="stats-number">86</div>
                         <div class="stats-label">GSoC Proposals</div>
                     </div>
+                    
+                    <div class="stats-box">
+                        <div class="stats-number">42</div>
+                        <div class="stats-label">Blogs Posted</div>
+                    </div>
                 </div>
                 
-                <p><strong>🌟 We Hit 8,000 GitHub Stars!</strong><br>
+                <!-- <p><strong>🌟 We Hit 8,000 GitHub Stars!</strong><br>
                 We're officially an 8k+ starred project on GitHub! This is more than a number - it's a testament to the open-source community that believes in our mission of making testing invisible.</p>
                 
                 <p>To every stargazer, contributor, bug reporter, and enthusiast - thank you 💙</p>
                 
                 <p><strong>🔌 VS Code Extension Crosses 350,000 Downloads</strong><br>
-                Our VS Code Extension just hit 350K+ installs! We're blown away by the adoption and love from the community.</p>
+                Our VS Code Extension just hit 350K+ installs! We're blown away by the adoption and love from the community.</p> -->
                 
-                <p>If you haven't tried it yet, here's what it brings:</p>
+                <!-- <p>If you haven't tried it yet, here's what it brings:</p>
                 <ul class="checklist">
                     <li>Instantly record API calls and responses</li>
                     <li>Auto-generate tests without leaving the editor</li>
                     <li>Run and debug tests directly inside VS Code</li>
                     <li>Native support for both integration and unit tests</li>
-                </ul>
+                </ul> -->
                 
                 <p>Thanks for making it one of the most loved developer tools in testing! ❤️</p>
+            </div>
+            
+            <!-- Blog Section -->
+            <div class="section">
+                <h2>📝 Latest from the Keploy Blog</h2>
+                <p>Our team and community contributors have been busy sharing insights, tutorials, and best practices.</p>
+                
+                <!-- <div class="blog-section">
+                    <div class="blog-post">
+                        <div class="blog-title">How to Automate Test Generation with Keploy's UTG</div>
+                        <div class="blog-date">April 15, 2025</div>
+                    </div>
+                    
+                    <div class="blog-post">
+                        <div class="blog-title">Building Reliable Microservices: A Testing Approach</div>
+                        <div class="blog-date">April 8, 2025</div>
+                    </div>
+                    
+                    <div class="blog-post">
+                        <div class="blog-title">From Manual to Auto-generated: Our Testing Journey</div>
+                        <div class="blog-date">April 2, 2025</div>
+                    </div>
+                </div> -->
+                
+                <a href="https://keploy.io/blog" class="cta-button">Visit the Keploy Blog</a>
             </div>
             
             <!-- Pricing Section -->
@@ -358,21 +439,41 @@
                 <h2>💰 Our Pricing Page is Live!</h2>
                 <p>You asked, we listened.</p>
                 <p>We launched a transparent and flexible Pricing Page, designed for everyone from indie developers and early-stage startups to large-scale enterprises. Simple tiers, generous free limits, and no surprises.</p>
-                <a href="#" class="cta-button">Check out our pricing</a>
+                <a href="https://keploy.io/pricing" class="cta-button">Check out our pricing</a>
             </div>
             
             <!-- Contributors Section -->
             <div class="section">
                 <h2>🌟 Contributor Spotlight</h2>
-                <p>A special shoutout to our Top Contributors:</p>
+                <p>A special shoutout to our Top Open Source Contributors:</p>
                 
                 <div class="contributor">
                     <div class="contributor-image">
-                        <img src="/api/placeholder/60/60" alt="Contributor Photo" />
+                        <img src="/images/contributors/prabhakaran.png" alt="Contributor Photo" />
                     </div>
                     <div class="contributor-details">
-                        <div class="contributor-name">@prabhakaranan</div>
-                        <div class="contributor-achievement">Added gRPC support to Keploy (highly requested feature ✅)</div>
+                        <div class="contributor-name">@Prabhakaran-m-allen</div>
+                        <!-- <div class="contributor-achievement">Huge shoutout to him for adding the gRPC support for Keploy.</div> -->
+                    </div>
+                </div>
+                
+                <div class="contributor">
+                    <div class="contributor-image">
+                        <img src="/images/contributors/jaydee029.png" alt="Contributor Photo" />
+                    </div>
+                    <div class="contributor-details">
+                        <div class="contributor-name">@jaydee029</div>
+
+                    </div>
+                </div>
+                
+                <div class="contributor">
+                    <div class="contributor-image">
+                        <img src="/images/contributors/michael-020.png" alt="Contributor Photo" />
+                    </div>
+                    <div class="contributor-details">
+                        <div class="contributor-name">@michael-020</div>
+
                     </div>
                 </div>
                 
@@ -386,7 +487,7 @@
                 
                 <p>The energy, curiosity, and innovation we saw from students across the globe blew us away. We're reviewing applications carefully and can't wait to onboard our selected contributors soon. 🚀</p>
                 
-                <p>Keploy was built by students, for developers. This full-circle moment is special. ❤️</p>
+
             </div>
             
             <!-- CTA Section -->
@@ -397,7 +498,7 @@
                     
                     <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px;">
                         <a href="https://github.com/apps/keploy" class="cta-button">Install the GitHub App</a>
-                        <a href="#" class="cta-button">Read the Docs</a>
+
                     </div>
                     
                     <p style="margin-top: 20px;">Let us know how it works for your team - or just drop a star if you love what we're building ⭐</p>
@@ -412,11 +513,10 @@
         <!-- Footer -->
         <div class="footer">
             <div class="social-links">
-                <a href="#">GitHub</a> | 
-                <a href="#">Twitter</a> | 
-                <a href="#">Slack</a> | 
-                <a href="#">Discord</a> | 
-                <a href="#">LinkedIn</a>
+                <a href="https//github.com/keploy.io">GitHub</a> | 
+                <a href="https://x.com/keployio">Twitter</a> | 
+                <a href="https://join.slack.com/t/keploy/shared_invite/zt-2poflru6f-_VAuvQfCBT8fDWv1WwSbkw">Slack</a> | | 
+                <a href="https://www.linkedin.com/company/keploy/">LinkedIn</a>
             </div>
             <p>© 2025 Keploy. All rights reserved.</p>
             <!-- <p>
